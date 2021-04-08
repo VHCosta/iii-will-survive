@@ -1,0 +1,20 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.battleDiv {
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+}
+
+.battleDiv > div {
+    border: white 2px solid;
+    width: 100%;
+    display:flex;
+   justify-content: space-evenly;
+}
+
