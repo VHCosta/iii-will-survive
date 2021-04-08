@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.start {
+    text-align: center;
+    vertical-align: center;
+
+    justify-content: center;
+    justify-self: center;
+
+    display: flex;
+
+    padding: 15px;
+
+    background-color: black;
+
+}
+
+.startButton {
+    padding-top: 60%;
+    margin-top: 60%;
+    align-items: flex-end;
+    justify-content: center;
+    justify-items: center;
+}
