@@ -1,0 +1,58 @@
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .story-img {
+        display: flex;
+    }
+    
+    .start {
+        text-align: center;
+        vertical-align: center;
+        justify-content: center;
+        justify-self: center;
+        display: flex;
+        padding: 15px;
+        background-color: black;
+    }
+    
+    .startButton {
+        padding-top: 60%;
+        margin-top: 60%;
+        align-items: flex-end;
+        justify-content: center;
+        justify-items: center;
+    }
+    /* reset */
+    
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    html {
+        font-size: 16px;
+    }
+    /* main */
+    
+    .inner_img {
+        width: 50%;
+        margin: 8rem auto;
+        overflow: hidden;
+    }
+    
+    .img {
+        width: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &::before {
+            content: '';
+            display: block;
+            padding-top: 56.25%;
+        }
+    }
