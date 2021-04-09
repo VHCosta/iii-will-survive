@@ -2,6 +2,7 @@ const selectionButtons = document.querySelectorAll('[data-selection]')
 const finalColumn = document.querySelector('[data-final-column]')
 const computerScoreSpan = document.querySelector('[data-computer-score]')
 const yourScoreSpan = document.querySelector('[data-your-score]')
+
 const SELECTIONS = [
   {
     name: 'rock',
@@ -15,7 +16,7 @@ const SELECTIONS = [
   },
   {
     name: 'scissors',
-    emoji: '✌',
+    emoji: '✌️',
     beats: 'paper'
   }
 ]
@@ -29,28 +30,30 @@ selectionButtons.forEach(selectionButton => {
 })
 
 function makeSelection(selection) {
+
   const computerSelection = randomSelection()
   const yourWinner = isWinner(selection, computerSelection)
   const computerWinner = isWinner(computerSelection, selection)
-  console.log(selection);
 
   addSelectionResult(computerSelection, computerWinner)
   addSelectionResult(selection, yourWinner)
 
-  if (yourWinner) incrementScore(yourScoreSpan)
-  if (computerWinner) incrementScore(computerScoreSpan)
   var playerScore = yourScoreSpan.innerText;
   var computerScore = computerScoreSpan.innerText;
+
+  if (yourWinner) incrementScore(yourScoreSpan)
+
+  if (computerWinner) incrementScore(computerScoreSpan)
+
+  console.dir(playerScore);
+  console.log(computerScore);
+
   if(playerScore == 3){
-  
-  console.log("victory");
-  
+    console.dir("victory")
   }
   if(computerScore == 3){
-    console.log("defeat");
-    
+    console.log("get rekt son");
   }
-  
 }
 
 function incrementScore(scoreSpan) {
