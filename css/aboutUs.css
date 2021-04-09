@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -8,14 +9,14 @@ body, html {
     height: 50%;
     display: flex;
     justify-content: space-around;
-    background-color: black;
+    background-color: white;
 }
 
-.the1st3 > div {
+.the1st3>div {
     border: white 2px solid;
     width: 100%;
-    display:flex;
-   justify-content: space-evenly;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .mid1st {
@@ -29,6 +30,10 @@ body, html {
     height: 30%;
     display: flex;
     background-color: green;
-    
 }
 
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
