@@ -4,20 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/battle.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Battwle twime uWu</title>
+    <link rel="stylesheet" href="css/battle.css">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
 
-    <div class="battleDiv">
-        <div id="div1"></div>
-        <div id="div2"></div>
-        <div id="div3"></div>
-        <div id="div4"></div>
+    <div class="results"> </div>
+        <div id="div1"> <img id="i" src="img/enemies-11.png"/></div>
+
+        <div id="div2">Me
+            <span class="result-score" data-your-score>0</span></div>
+
+        <div id="div3">My ex
+            <span class="result-score" data-computer-score>0</span></div>
+
+        <div id="div4"> <img id="haunter" src="img/enemies-12.png"/></div>
     </div>
 
-    <div class="battleDiv"></div>
+    <div class="battleDivBot" id="bottomDiv">
+        <button class="selection" data-selection="rock">✊</button>
+        <button class="selection" data-selection="paper">✋</button>
+        <button class="selection" data-selection="scissors">✌</button>
+    </div>
 
 </body>
 

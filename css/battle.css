@@ -5,16 +5,96 @@ body, html {
 }
 
 .battleDiv {
-    height: 50%;
+    height: 75%;
     display: flex;
     justify-content: space-around;
-    background-color: black;
+    background-color: white;
+}
+
+.battleDivBot {
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
 }
 
 .battleDiv > div {
-    border: white 2px solid;
     width: 100%;
     display:flex;
    justify-content: space-evenly;
+   border: black 5px solid;
 }
 
+#div1 {
+    top: 57%;
+    position: relative;
+    height: 75%;
+}
+
+#div2 {
+    top: 60%;
+    position: relative;
+    height: 20%;
+    width: 50%;
+}
+
+#div3 {
+    top: 52%;
+    position: relative;
+    height: 20%;
+    width: 50%;
+}
+
+#div4 {
+
+    height: 75%;
+}
+
+.results {
+    margin-top: 1rem;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .result-score {
+    margin-left: .1rem;
+    font-size: 2rem;
+    color: #333;
+  }
+
+#bottomDiv {
+    background-color: white;
+    border: black 5px solid;
+    left: 50%;
+    position: relative;
+    width: 40%;
+    height: 24%;
+}
+
+#haunter {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+#i {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.selection {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 5rem;
+    transition: 100ms;
+  }
+
+  .selection:hover {
+    transform: scale(1.2);
+  }
