@@ -1,0 +1,34 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.the1st3 {
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+}
+
+.the1st3 > div {
+    border: white 2px solid;
+    width: 100%;
+    display:flex;
+   justify-content: space-evenly;
+}
+
+.mid1st {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.inner1st {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    background-color: green;
+    
+}
+
