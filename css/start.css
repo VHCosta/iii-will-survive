@@ -1,33 +1,68 @@
-    *,
-    *::before,
-    *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    margin: 0%;
+    padding: 5% 5% 0% 5%;
+}
+
+
+/* main */
+
+.story-box {
+    display: flex;
+    flex-direction: row;
+    justify-items: space-evenly;
+    width: 100%;
+    margin: 8rem auto;
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.story {
+    display: flex;
+}
+
+.top-div {
+    text-align: center;
+}
+
+#title {
+    max-width: 60%;
+}
+
+#start {
+    animation: float 2s infinite;
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        padding: 10%;
     }
-    
-    html {
-        font-size: 16px;
-        margin: 0%;
-        padding: 5% 5% 0% 5%;
+    #title {
+        max-width: 75%;
     }
-    /* main */
-    
-    .story-box {
-        display: flex;
-        flex-direction: row;
-        justify-items: space-evenly;
-        width: 100%;
-        margin: 8rem auto;
-        overflow: hidden;
+}
+
+@keyframes float {
+    0% {
+        transform: scale(0.6);
     }
-    
-    img {
-        max-width: 100%;
-        width: auto;
-        height: auto;
+    50% {
+        transform: scale(0.8);
     }
-    
-    .story {
-        display: flex;
+    100% {
+        transform: scale(0.6);
     }
+}
