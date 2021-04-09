@@ -1,10 +1,29 @@
 body {
-    background-color: #CCC;
+    margin: auto;
+}
+
+#bg {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    z-index: -1;
 }
 
 .selections {
     display: flex;
     justify-content: center;
+}
+
+.mother {
+    padding-top: 150px;
+    display: flex;
+    margin: auto;
+    background-image: url("img/battlebg.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 60%;
+    height: 1000px;
 }
 
 .selection {

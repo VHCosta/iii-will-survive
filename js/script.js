@@ -42,7 +42,7 @@ function makeSelection(selection) {
 
     if (yourWinner) {
         if (playerScore > 2) {
-            window.location.replace("/story4.html");
+            window.location.replace("story4.html");
         }
         incrementScore(yourScoreSpan);
     }
@@ -50,7 +50,7 @@ function makeSelection(selection) {
 
     if (computerWinner) {
         if (computerScore > 2) {
-            window.location.replace("/gameOver.html");
+            window.location.replace("gameOver.html");
         }
         incrementScore(computerScoreSpan);
     }
