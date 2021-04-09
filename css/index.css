@@ -21,3 +21,10 @@ body {
 a {
     text-decoration: none;
 }
+
+img {
+    max-height: 75%;
+    max-width: 75%;
+    width: auto;
+    height: auto;
+}

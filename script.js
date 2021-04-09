@@ -3,73 +3,81 @@ const finalColumn = document.querySelector('[data-final-column]')
 const computerScoreSpan = document.querySelector('[data-computer-score]')
 const yourScoreSpan = document.querySelector('[data-your-score]')
 
-const SELECTIONS = [
-  {
-    name: 'rock',
-    emoji: '✊',
-    beats: 'scissors'
-  },
-  {
-    name: 'paper',
-    emoji: '✋',
-    beats: 'rock'
-  },
-  {
-    name: 'scissors',
-    emoji: '✌️',
-    beats: 'paper'
-  }
+const SELECTIONS = [{
+        name: 'rock',
+        emoji: '✊',
+        beats: 'scissors'
+    },
+    {
+        name: 'paper',
+        emoji: '✋',
+        beats: 'rock'
+    },
+    {
+        name: 'scissors',
+        emoji: '✌️',
+        beats: 'paper'
+    }
 ]
 
 selectionButtons.forEach(selectionButton => {
-  selectionButton.addEventListener('click', e => {
-    const selectionName = selectionButton.dataset.selection
-    const selection = SELECTIONS.find(selection => selection.name === selectionName)
-    makeSelection(selection)
-  })
+    selectionButton.addEventListener('click', e => {
+        const selectionName = selectionButton.dataset.selection
+        const selection = SELECTIONS.find(selection => selection.name === selectionName)
+        makeSelection(selection)
+    })
 })
 
 function makeSelection(selection) {
 
-  const computerSelection = randomSelection()
-  const yourWinner = isWinner(selection, computerSelection)
-  const computerWinner = isWinner(computerSelection, selection)
+    const computerSelection = randomSelection()
+    const yourWinner = isWinner(selection, computerSelection)
+    const computerWinner = isWinner(computerSelection, selection)
 
-  addSelectionResult(computerSelection, computerWinner)
-  addSelectionResult(selection, yourWinner)
+    addSelectionResult(computerSelection, computerWinner)
+    addSelectionResult(selection, yourWinner)
 
-  var playerScore = yourScoreSpan.innerText;
-  var computerScore = computerScoreSpan.innerText;
+    var playerScore = yourScoreSpan.innerText;
+    var computerScore = computerScoreSpan.innerText;
 
-  if (yourWinner) incrementScore(yourScoreSpan)
+    if (yourWinner) {
+        incrementScore(yourScoreSpan, true);
+    }
 
-  if (computerWinner) incrementScore(computerScoreSpan)
 
-  console.dir(playerScore);
-  console.log(computerScore);
+    if (computerWinner) {
+        incrementScore(computerScoreSpan, false);
+    }
 
-  if(playerScore == 3){
-    console.dir("victory")
-  }
-  if(computerScore == 3){
-    console.log("get rekt son");
-  }
+    console.dir(playerScore);
+    console.log(computerScore);
+
+
+
 }
 
-function incrementScore(scoreSpan) {
-  scoreSpan.innerText = parseInt(scoreSpan.innerText) + 1
+function incrementScore(scoreSpan, won) {
+    
+    scoreSpan.innerText = parseInt(scoreSpan.innerText) + 1
+    var score = scoreSpan.innerText;
+    
+    if (score > 2) {
+        window.location.replace(won ? "/story4.html" : "/gameOver.html")
+    }
+
+
 }
 
 function addSelectionResult(selection, winner) {
-  const div = document.createElement('div')
-  div.innerText = selection.emoji
-  div.classList.add('result-selection')
-  if (winner) div.classList.add('winner')
-  finalColumn.after(div)
+    const div = document.createElement('div')
+    div.innerText = selection.emoji
+    div.classList.add('result-selection')
+    if (winner) div.classList.add('winner')
+    finalColumn.after(div)
 }
 
 function isWinner(selection, opponentSelection) {
-  return selection.beats === opponentSelection.name
+    return selection.beats === opponentSelection.name
 }
 
 function randomSelection() {
