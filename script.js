@@ -76,3 +76,12 @@ function randomSelection() {
   const randomIndex = Math.floor(Math.random() * SELECTIONS.length)
   return SELECTIONS[randomIndex]
 }
+
+/* $('#sound').append('<embed id="embed_player" src="testsong.mp3" autostart="true" hidden="true"></embed>');
+ *//* var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+  if (!isChrome){
+      $('#iframeAudio').remove()
+  }
+  else {
+      $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
+  } */

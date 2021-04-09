@@ -1,5 +1,7 @@
 body {
-    background-color: #CCC;
+    background-image: url("img/testFight_Prancheta\ 1\ cópia\ 20.png");
+    width: auto;
+    height: auto;
   }
   .selections {
     display: flex;
