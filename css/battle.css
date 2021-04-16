@@ -1,0 +1,77 @@
+body {
+    margin: auto;
+}
+
+#bg {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    z-index: -1;
+}
+
+.selections {
+    display: flex;
+    justify-content: center;
+}
+
+.mother {
+    padding-top: 150px;
+    display: flex;
+    margin: auto;
+    background-image: url("/img/battlebg.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 60%;
+    height: 1000px;
+}
+
+.selection {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: 100ms;
+}
+
+.selection:hover {
+    transform: scale(1.2);
+}
+
+.results {
+    margin-top: 1rem;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.result-score {
+    margin-left: .1rem;
+    font-size: .5rem;
+    color: #333;
+}
+
+.result-selection {
+    opacity: .5;
+}
+
+.result-selection.winner {
+    opacity: 1;
+    font-size: 1.5rem;
+}
+
+.i,
+.haunter {
+    max-height: 300px;
+    max-width: 300px;
+    width: auto;
+    height: auto;
+}
+
+.images {
+    display: flex;
+    justify-content: space-evenly;
+}
